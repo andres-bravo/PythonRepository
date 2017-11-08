@@ -1,0 +1,40 @@
+LOAD DATA
+INFILE 'TrafRTTE_TCC_SGSN2G_RTT_B_GUISG1_20170503120828_20170503120838_0.dat'
+INTO TABLE "TRAFFICA"."TCC_SGSN2G_RTT"
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY "'"
+(
+	"Sgsn_Rtt_Apn" CHAR(101) NULLIF NULL,
+	"Sgsn_Rtt_Cause_Cause" UINT32 NULLIF NULL,
+	"Sgsn_Rtt_Cause_Proc" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Cgi_Ci" UINT16 NULLIF NULL,
+	"Sgsn_Rtt_Cgi_Lac" UINT16 NULLIF NULL,
+	"Sgsn_Rtt_Cgi_Mcc" CHAR(4) NULLIF NULL,
+	"Sgsn_Rtt_Cgi_Mnc" CHAR(4) NULLIF NULL,
+	"Sgsn_Rtt_Cgi_Rac" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Charging_Index" UINT32 NULLIF NULL,
+	"Sgsn_Rtt_Cs_External_Cause" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Data_Amount_Down" UINT32 NULLIF NULL,
+	"Sgsn_Rtt_Data_Amount_Up" UINT32 NULLIF NULL,
+	"Sgsn_Rtt_Imei" CHAR(16) NULLIF NULL,
+	"Sgsn_Rtt_Imsi" CHAR(16) NULLIF NULL,
+	"Sgsn_Rtt_Msisdn_Numbers" CHAR(18) NULLIF NULL,
+	"Sgsn_Rtt_Ps_External_Cause" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Report_Date+Sgsn_Rtt_Report_Time" TIMESTAMP NULLIF NULL,
+	"Sgsn_Rtt_Roaming_Status" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Whole_Data_Amount_Down" UINT32 NULLIF NULL,
+	"Sgsn_Rtt_Whole_Data_Amount_Up" UINT32 NULLIF NULL,
+	"Sgsn_Rtt_Ms_Pdp_Address" CHAR(40) NULLIF NULL,
+	"Sgsn_Rtt_Ms_Pdp_Address_Type" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Ra_Access_Type" UINT8 NULLIF NULL,
+	"Sgsn_Rtt_Event_Start_Date+Sgsn_Rtt_Event_Start_Time" TIMESTAMP NULLIF NULL,
+	"Sgsn_Rtt_Event_Stop_Date+Sgsn_Rtt_Event_Stop_Time" TIMESTAMP NULLIF NULL,
+	"Sgsn_Rtt_Rnc_Address_Mcc" CHAR(4) NULLIF NULL,
+	"Sgsn_Rtt_Rnc_Address_Mnc" CHAR(4) NULLIF NULL,
+	"Sgsn_Rtt_Rnc_Id" UINT16 NULLIF NULL,
+	"Sgsn_Rtt_Sai_Lac" UINT16 NULLIF NULL,
+	"Sgsn_Rtt_Sai_Mcc" CHAR(4) NULLIF NULL,
+	"Sgsn_Rtt_Sai_Mnc" CHAR(4) NULLIF NULL,
+	"Sgsn_Rtt_Sai_Sac" UINT16 NULLIF NULL,
+	"Sgsn_Rtt_Ggsn_Address" CHAR(40) NULLIF NULL
+)

@@ -1,0 +1,42 @@
+LOAD DATA
+INFILE 'TrafRTTE_TCC_TFP_PS_Gn_CMON1_20170503123121_20170503123131_0.dat'
+INTO TABLE "TRAFFICA"."TCC_TFP_PS_Gn"
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY "'"
+(
+	"TFP_Gn_Report_Date+TFP_Gn_Report_Time" TIMESTAMP NULLIF NULL,
+	"TFP_Gn_Report_Reason" UINT8 NULLIF NULL,
+	"TFP_Gn_Gtp_Cause" UINT16 NULLIF NULL,
+	"TFP_Gn_Imsi" CHAR(16) NULLIF NULL,
+	"TFP_Gn_Imei" CHAR(16) NULLIF NULL,
+	"TFP_Gn_Msisdn" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Mobile_Ip_Address" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Lac" UINT16 NULLIF NULL,
+	"TFP_Gn_Rac" UINT8 NULLIF NULL,
+	"TFP_Gn_Sgsn" UINT16 NULLIF NULL,
+	"TFP_Gn_Gsn" UINT16 NULLIF NULL,
+	"TFP_Gn_Sgsn_Address_For_User_Traffic" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Sgsn_Address_For_Signalling" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Gsn_Address_For_User_Traffic" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Gsn_Address_For_Signalling" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Apn" CHAR(102) NULLIF NULL,
+	"TFP_Gn_Gtp_User_Data_Bytes_Uplink" UINT64 NULLIF NULL,
+	"TFP_Gn_Gtp_User_Data_Bytes_Downlink" UINT64 NULLIF NULL,
+	"TFP_Gn_Total_Bytes_Uplink" UINT64 NULLIF NULL,
+	"TFP_Gn_Total_Bytes_Downlink" UINT64 NULLIF NULL,
+	"TFP_Gn_Pdp_Context_Activation_Date+TFP_Gn_Pdp_Context_Activation_Time" TIMESTAMP NULLIF NULL,
+	"TFP_Gn_Collection_Start_Date+TFP_Gn_Collection_Start_Time" TIMESTAMP NULLIF NULL,
+	"TFP_Gn_Collection_End_Date+TFP_Gn_Collection_End_Time" TIMESTAMP NULLIF NULL,
+	"TFP_Gn_Rat_Type" UINT8 NULLIF NULL,
+	"TFP_Gn_Ggsn_Address_IP" CHAR(40) NULLIF NULL,
+	"TFP_Gn_Username" CHAR(20) NULLIF NULL,
+	"TFP_Gn_Password" CHAR(20) NULLIF NULL,
+	"TFP_Gn_Mean_Throughput_Uplink" UINT32 NULLIF NULL,
+	"TFP_Gn_Mean_Throughput_Downlink" UINT32 NULLIF NULL,
+	"TFP_Gn_Peak_Throughput_Uplink" UINT32 NULLIF NULL,
+	"TFP_Gn_Peak_Throughput_Downlink" UINT32 NULLIF NULL,
+	"TFP_Gn_Mcc_Mnc" CHAR(6) NULLIF NULL,
+	"TFP_Gn_User_Lac" UINT16 NULLIF NULL,
+	"TFP_Gn_Cell_Identity" UINT16 NULLIF NULL,
+	"TFP_Gn_Sac" UINT16 NULLIF NULL
+)

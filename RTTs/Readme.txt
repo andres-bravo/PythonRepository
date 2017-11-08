@@ -1,0 +1,1 @@
+Al comienzo del fichero de control está el nombre del fichero de texto esto es muy importante.
