@@ -17,10 +17,13 @@ print('csvRttHeaders.py')
 ficheroheaders = "D:/Trabajo/Formacion/Phyton/GitRepository/RTTs/TrafRTTE_TCC_TFP_PS_Gn_CMON1_20170503123121_20170503123131_0_Test.ctr"
 #Sgsn
 ficheroheaders = "D:/Trabajo/Formacion/Phyton/GitRepository/RTTs/TrafRTTE_TCC_SGSN2G_RTT_B_GUISG1_20170503120828_20170503120838_0_Test01.ctr"
+#Voice
+ficheroheaders = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_Orig.ctr"
 
 with open(ficheroheaders) as csvarchivo:
     entrada = csv.reader(csvarchivo, delimiter=',', quotechar="'")
     indice = 0
+    print(ficheroheaders)
     for reg in entrada:
         #print("linea", indice)
         #print(reg)
@@ -32,7 +35,9 @@ with open(ficheroheaders) as csvarchivo:
         #Gn
         #CadenaBusqueda = "TFP_Gn"
         #Sgsn
-        CadenaBusqueda = "Sgsn_"
+        #CadenaBusqueda = "Sgsn_"
+        #Voice
+        CadenaBusqueda = "TFP_MC"
         if ((CadenaBusqueda in reg[0])):
             print("campo", indice)
             print(reg[0])
