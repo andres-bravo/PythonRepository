@@ -7,6 +7,7 @@ import os
 import shutil
 #De un modulo puedo importar lo que yo quiera
 from RttGenerator import *
+from csvRttHeadersv1 import *
 
 #Array de indices de campos a modificar
 #Gb, 1 ReportReason, 4 SmCause, 6 Imsi, 7 Msisdn
@@ -41,8 +42,15 @@ matrix_field_values =['214070000000205','214070000000206','34600000206','3460000
 #CsvFileModif = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_Test.dat"
 #CsvFileDestination = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_VoiceCallControlError.dat"
 #Voice Signalling Error
+#CsvFileModif = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_Test.dat"
+#CsvFileDestination = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_VoiceSignallingError.dat"
+#Voice Radiio Resource Error 
 CsvFileModif = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_Test.dat"
-CsvFileDestination = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_VoiceSignallingError.dat"
+CsvFileDestination = "D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_VoiceRadioResourceError.dat"
+ficheroHeaders="D:\Trabajo\Proyectos\Development\PythonRepository\RTTs\TrafRTTE_TCC_TFP_CS_VOICE_A_SUR1M_20170614153704_20170614153709_0_Test.ctr"
+matrix_field_names=["A_IMSI","A_MSISDN","A_Direction_Number","B_IMSI","B_MSISDN","B_Direction_Number","A_RR_Cause","B_RR_Cause"]
+matrix_field_index=csvHeadersIndexes(ficheroHeaders, matrix_field_names,"TFP_MC")
+matrix_field_values=['214070000000207','34600000207','34600000207', '214070000000208','34600000208','34600000208',20,20]
 rtt_generator(CsvFileModif,CsvFileDestination,matrix_field_index,matrix_field_values)
 #Sobreescribo el fichero maestro con el nuevo
 #print("Renombrando Fichero:" + shutil.move(CsvFileModif+'nuevo', CsvFileModif))
